@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>HI Love!!!!!</title>
+  </head>
+  <body>
+    <main class="container">
+      <img class="main-pic" id="outputImage" src="img/mari.jpg" alt="main picture" />
+      <p class="title" id="outputText">Will you be my Valentine?</p>
+      <div class="buttons">
+        <button type="button" class="btn btn--yes" onclick="showResponse('Yes')">Yes</button>
+        <button type="button" class="btn btn--no" onclick="showResponse('No')">No</button>
+      </div>
+    </main>
+
+    <script>
+      function showResponse(response) {
+        var outputImage = document.getElementById('outputImage');
+        var outputText = document.getElementById('outputText');
+
+        if (response === 'Yes') {
+          outputImage.src = 'img/yes.jpg'; // Replace 'yes-image.jpg' with the path to your desired image
+          outputText.innerText = 'You are my Valentine! I LOVE YOUUUU 💖';
+        } else {
+          outputImage.src = 'img/no.jpg'; // Replace 'no-image.jpg' with the path to your desired image
+          outputText.innerText = 'ggs time to get wasted. 😢';
+        }
+      }
+    </script>
+  </body>
+</html>
+
